@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuoteOfTheDay</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- box for quotations -->
+    <div class="quote-box">
+        <h2>QuoteOfTheDay</h2>
+        <!-- The <blockquote> tag specifies a section that is quoted from another source -->
+        <blockquote id="quote">Loading...</blockquote>
+        <!-- for author name to display down of the quote -->
+        <span id="author">Loading...</span>
+        <div>
+            <!-- button for new quote to come using getquote fun from js involving api  -->
+            <button onclick="getquote(api_url)">New Quote</button>
+            <!-- button for tweet the quote using tweet fun form js having twiteer site -->
+            <button onclick="tweet()"><img src="twitter.png" alt="">Tweet</button>
+        </div>
+    </div>
+    <!-- linking to js -->
+    <script src="main.js"></script>
+</body>
+</html>

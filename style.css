@@ -1,0 +1,126 @@
+/* importing google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* all elements in page should ahve this have properties */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display',serif;
+}
+/* effect for body */
+body{
+    background: rgb(138, 160, 193);
+}
+
+.quote-box{
+    background-color: #fff;
+    width: 700px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 40px;
+    border-radius: 40px;
+    text-align: center;
+    box-shadow: 0 10px 20px 0px rgba(0,0,0,0.15);
+}
+/* h2 tag had QuoteOfTheDay  */
+.quote-box h2{
+     font-size: 35px;
+     margin-bottom: 40px;
+     position: relative;;
+}
+/* the underline effect under QuoteOfTheDay */
+.quote-box h2::after{
+    content:"";
+    width: 75px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: rgb(32,124,229);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* actual quote of displays with this effects */
+.quote-box blockquote{
+    font-size: 26px;
+    min-height: 110px;
+}
+
+/* .quote-box blockquote::before, .quote-box blockquote::after{
+    content:"''";
+
+} */
+
+
+/*  span tag has author name of the quote disaplays bottom right corner of the quote box*/
+.quote-box span{
+    display: block;
+    margin-top:10px;
+    float: right;
+    position: relative;
+}
+/* effect before the author name with underline like effect */
+.quote-box span::before{
+    content:'';
+    width: 20px;
+    height: 2px;
+    background: rgb(32,124,229);
+    position: absolute;
+    top:50%;
+    left:-30px;
+
+}
+/* div of quuoteBox applying flex and content to center */
+.quote-box div{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+/* buttons has follwoing properties */
+.quote-box button{
+    background: rgb(23,124,229);
+    color: #fff;
+    border-radius: 25px;
+    border:1px solid rgb(23,124,229);
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+
+/* image effect for buttons which have images tag in their button tag */
+.quote-box button img{
+    width: 20px;
+    margin-right:10px;
+}
+.quote-box button:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+/* after adding image making the button transparent */
+
+.quote-box button:nth-child(2){
+    background: transparent;
+    color:black;
+}
+.quote-box button:nth-child(2):hover{
+    background-color: rgb(23,124,229);
+    color: white;
+}
+
+/*to make   page responsive  */
+@media (max-width:568px) {
+    .quote-box{
+        width:350px;
+        padding: 20px;
+
+    }
+}
